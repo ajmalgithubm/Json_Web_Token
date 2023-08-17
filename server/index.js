@@ -25,7 +25,7 @@ app.listen(PORT, () => {
 // cors specify the domain for the access
 
 app.use(cors({
-    origin: ['http://localhost:4001'],
+    origin: ['http://localhost:4001', 'http://localhost:3000'],
     methods:['GET', 'POST',  'PUT', 'DELETE'],
     credentials:true
 }))

@@ -28,7 +28,7 @@ module.exports.LogIn =async (req, res, next) => {
     try{
         const {email, password} = req.body;
         if(!email || !password){
-            return res.json({ message: "All Fields are Required!"});
+            return res.json({ message: "All fields are Required!"});
         }
         const user = await User.findOne({email}).exec();
         //   console.log("user is", user)
