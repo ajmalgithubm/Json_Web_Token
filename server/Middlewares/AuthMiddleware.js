@@ -9,7 +9,7 @@ module.exports.userVerification = (req, res) => {
     }
     jwt.verify(token, process.env.SECRET_KEY, async (err, data) =>{
         if(err){
-            return re.json({status: false})
+            return res.json({status: false})
         }else{
             console.log("user Id", data.id)
             const user = await User.findById(data.id).exec();
